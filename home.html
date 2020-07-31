@@ -1,0 +1,811 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" class="style">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+    <title>Instragram</title>
+
+</head>
+
+<body class="bg-light">
+    <div class="bg-white fixed-top mb-4 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <div class="container justify-content-center">
+                <div class="d-flex flex-row flex-wrap justify-content-between align-items-center col-12" id="navbar">
+                    <div>
+                        <a class="navbar-brand instagram" href="#" style="font-size: 2rem;">Instagram</a>
+
+                    </div>
+                    <div>
+                        <form class="form-inline">
+                            <input class="form-control text-center bg-light mr-sm-2" type="search"
+                                placeholder="Search..." aria-label="Search">
+                        </form>
+                    </div>
+                    <div>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <a class="nav-link nav-icons px-1 mx-1 py-3 my-n2" href="#" id="icons">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house-door-fill"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.5 10.995V14.5a.5.5 0 0 1-.5.5H2a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .146-.354l6-6a.5.5 
+                                            0 0 1 
+                                            .708 0l6 6a.5.5 0 0 1 .146.354v7a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5V11c0-.25-.25-.5-.5-.5H7c-.25 0-.5.25-.5.495z" />
+                                        <path fill-rule="evenodd"
+                                            d="M13 2.5V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="/dm.html" class="nav-link nav-icons px-1 mx-1 py-3 my-n2" id="icons">
+                                    <svg aria-label="Direct" class="_8-yf5 " fill="#262626" height="22"
+                                        viewBox="0 0 48 48" width="22">
+                                        <path
+                                            d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 
+                                        0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="/explore.html" class="nav-link nav-icons px-1 mx-1 py-3 my-n2" id="icons">
+                                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-compass"
+                                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 15.016a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13zm0 1a7.5 7.5 0 1 0 0-15 7.5 7.5 0 0 0 0 15z" />
+                                        <path
+                                            d="M6 1a1 1 0 0 1 1-1h2a1 1 0 0 1 0 2H7a1 1 0 0 1-1-1zm.94 6.44l4.95-2.83-2.83 4.95-4.95 2.83 2.83-4.95z" />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <div>
+                                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                        <i class="far fa-heart" id="heartblk" onclick="changeToBlack()"
+                                            style="font-size: 1.5rem;"></i>
+
+
+                                    </button>
+                                    <div class="dropdown-menu dropdown-menu-lg-right"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">
+
+                                            <div class="d-flex flex-row align-items-start">
+                                                <div class="rounded-circle border border-danger img-fluid mr-2"
+                                                    style="border-width: 2px !important;">
+                                                    <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                        style="border-width: 2px !important;">
+                                                        <img src="images/vish-s.jpg" alt=""
+                                                            class="rounded-circle img-fluid">
+                                                    </div>
+                                                </div>
+                                                <strong class="mt-2">mahima<span> Liked your
+                                                        comment😍❤️😘</span></strong>
+                                            </div>
+                                        </a>
+                                        <hr>
+                                        <a class="dropdown-item" href="#">
+
+                                            <div class="d-flex flex-row align-items-start">
+                                                <div class="rounded-circle border border-danger img-fluid mr-2"
+                                                    style="border-width: 2px !important;">
+                                                    <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                        style="border-width: 2px !important;">
+                                                        <img src="images/ruchi-s.jpg" alt=""
+                                                            class="rounded-circle img-fluid">
+                                                    </div>
+                                                </div>
+                                                <strong class="mt-2">roshal.sm<span> Commented on your post😘</span>
+                                                </strong>
+                                            </div>
+
+                                        </a>
+                                        <hr>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex justify-content-between">
+                                                <div class="d-flex flex-row align-items-start">
+                                                    <div class="rounded-circle border border-danger img-fluid"
+                                                        style="border-width: 2px !important;">
+                                                        <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                            style="border-width: 2px !important;">
+                                                            <img src="images/vanshika-s.jpg" alt=""
+                                                                class="rounded-circle img-fluid">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="ml-2">
+                                                        <strong class="mt-2">vish<span> Liked your post
+                                                            </span>
+                                                        </strong>
+                                                    </div>
+
+                                                </div>
+                                                <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                    style="border-width: 2px !important;">
+                                                    <img src="images/vish-s.jpg" alt=""
+                                                        class="rounded-circle img-fluid">
+                                                </div>
+
+                                            </div>
+
+
+                                        </a>
+                                        <hr>
+                                        <a class="dropdown-item" href="#">
+                                            <div class="d-flex flex-row align-items-start">
+                                                <div class="rounded-circle border border-danger img-fluid mr-2"
+                                                    style="border-width: 2px !important;">
+                                                    <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                        style="border-width: 2px !important;">
+                                                        <img src="images/ruchi-s.jpg" alt=""
+                                                            class="rounded-circle img-fluid">
+                                                    </div>
+                                                </div>
+                                                <strong class="mt-2">reeshu<span> Commented on your post😘</span>
+                                                </strong>
+                                            </div>
+
+
+                                        </a>
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <!-- <a href="#" class="nav-link nav-icons px-1 mx-1 py-3 my-n2" id="icons">                                   
+                                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-heart"
+                                            fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                                        </svg>
+                                   </a> -->
+
+                            </li>
+                            <li class="list-inline-item align-middle">
+                                <a href="/about.html" class="nav-link nav-icons px-1 mx-1 py-3 my-n2">
+                                    <div
+                                        class="rounded-circle overflow-hidden d-flex justify-content-center align-items-center dp">
+                                        <img src="images/dp-.jpg" alt=""
+                                            style="transform: scale(1.5);width: 100%;position: absolute;left:0;">
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- End of nav -->
+    <div class="bg-light container">
+        <div class="container">
+            <div class="row mt-4 p-5" id="main-body">
+                <div class="col col-sm-12 col-md-12 col-lg-8 p-4" id="content">
+                    <!-- Start of story -->
+                    <div class="story d-flex justify-content-start">
+                        <div class="d-flex flex-column align-items-center pr-3">
+                            <div class="rounded-circle border border-danger  img-fluid"
+                                style="border-width: 2px !important;">
+                                <div class="rounded-circle border border-white" style="border-width: 2px !important;">
+                                    <img src="images/story1.jpg" alt="" class="rounded-circle img-fluid">
+                                </div>
+                            </div>
+                            <small>vanshika</small>
+                        </div>
+                        <div class="d-flex flex-column align-items-center pr-3">
+                            <div class="rounded-circle border border-danger  img-fluid"
+                                style="border-width: 2px !important;">
+                                <div class="rounded-circle border border-white" style="border-width: 2px !important;">
+                                    <img src="images/story2.jpg" alt="" class="rounded-circle img-fluid">
+                                </div>
+                            </div>
+                            <small>s.muttoo</small>
+                        </div>
+                        <div class="d-flex flex-column align-items-center pr-3">
+                            <div class="rounded-circle border border-danger  img-fluid"
+                                style="border-width: 2px !important;">
+                                <div class="rounded-circle border border-white" style="border-width: 2px !important;">
+                                    <img src="images/story3.jpg" alt="" class="rounded-circle img-fluid">
+                                </div>
+                            </div>
+                            <small>natasha</small>
+                        </div>
+                        <div class="d-flex flex-column align-items-center pr-3">
+                            <div class="rounded-circle border border-danger img-fluid"
+                                style="border-width: 2px !important;">
+                                <div class="rounded-circle border border-white" style="border-width: 2px !important;">
+                                    <img src="images/story2.jpg" alt="" class="rounded-circle img-fluid">
+                                </div>
+                            </div>
+                            <small>seema</small>
+                        </div>
+
+
+                    </div>
+                    <!-- End of story -->
+                    <!-- Start of posts -->
+                    <div class="row mt-4">
+                        <div class="col-12">
+                            <div class="card mb-1">
+                                <div class="card-header  bg-white">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle border border-danger img-fluid"
+                                            style="border-width: 2px !important;">
+                                            <div class="rounded-circle border border-white"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/card-dp3.jpg" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="pl-3 pt-2">
+                                            <span class="font-weight-bold">meghanand</span>
+                                            <p>Delhi,India</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="images/card-img1.jpg"></img>
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-2 pr-3 pt-3 pb-0">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0 heart-btn red">
+                                                    <i class="far fa-heart" id="heartbt" onclick="changeColor()"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </button>
+
+
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-comment" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-paper-plane" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+
+                                        <div>
+                                            <button class="btn p-0">
+                                                <i class="far fa-bookmark" style="font-size: 1.5rem;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">1500 likes</strong>
+                                        <strong class="d-block">meghanand</strong>
+                                        <p class="mb-1">Life is beautiful❤️</p>
+
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 100 comments</span>
+                                        </button>
+                                        <div>
+                                            <div>
+                                                <strong>vanshita <span>😍❤️😘</span></strong>
+                                            </div>
+                                            <div>
+                                                <strong>richa <span>❤️❤️❤️</span></strong>
+                                            </div>
+                                        </div>
+                                        <small class="muted">10 HOURS AG0</small>
+                                    </div>
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input type="text" class="w-100 border-0 p-3"
+                                                placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-post">Post</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-5 mb-1">
+                                <div class="card-header  bg-white">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div>
+                                            <img src="images/card-dp2.jpg" alt="" class="rounded-circle img-fluid">
+                                        </div>
+                                        <span class="font-weight-bold pl-3">priyal</span>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="images/card-img2.jpg"></img>
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-2 pr-3 pt-3 pb-0">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0 heart-btn red">
+                                                    <i class="far fa-heart" id="heart1" onclick="changeColor1()"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-comment" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-paper-plane" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+
+                                        <div>
+                                            <button class="btn p-0">
+                                                <i class="far fa-bookmark" style="font-size: 1.5rem;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">1100 likes</strong>
+                                        <strong class="d-block">priyal</strong>
+                                        <p class="mb-1">Childhood memories❤️</p>
+
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 50 comments</span>
+                                        </button>
+                                        <div>
+                                            <div>
+                                                <strong>riya <span>😍❤️😘</span></strong>
+                                            </div>
+                                            <div>
+                                                <strong>megha <span>❤️❤️❤️</span></strong>
+                                            </div>
+                                        </div>
+                                        <small class="muted">20 HOURS AG0</small>
+                                    </div>
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input type="text" class="w-100 border-0 p-3"
+                                                placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-post">Post</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-5 mb-1">
+                                <div class="card-header  bg-white">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle border border-danger img-fluid"
+                                            style="border-width: 2px !important;">
+                                            <div class="rounded-circle border border-white"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/card-dp1.jpg" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="pl-3 pt-2">
+                                            <span class="font-weight-bold">charu</span>
+                                            <p>Paris</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="images/card-img3.jpg"></img>
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-2 pr-3 pt-3 pb-0">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0 heart-btn red">
+                                                    <i class="far fa-heart" id="heart2" onclick="changeColor2()"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-comment" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-paper-plane" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+
+                                        <div>
+                                            <button class="btn p-0">
+                                                <i class="far fa-bookmark" style="font-size: 1.5rem;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">1100 likes</strong>
+                                        <strong class="d-block">roopali</strong>
+                                        <p class="mb-1">Love you❤️</p>
+
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 50 comments</span>
+                                        </button>
+                                        <div>
+                                            <div>
+                                                <strong>riya <span>So cute😍❤️😘</span></strong>
+                                            </div>
+                                            <div>
+                                                <strong>megha <span>wowwwwwww❤️❤️❤️</span></strong>
+                                            </div>
+                                        </div>
+                                        <small class="muted">20 HOURS AG0</small>
+                                    </div>
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input type="text" class="w-100 border-0 p-3"
+                                                placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-post">Post</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-5 mb-1">
+                                <div class="card-header  bg-white">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle border border-danger img-fluid"
+                                            style="border-width: 2px !important;">
+                                            <div class="rounded-circle border border-white"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/jaidev-dp.jpg" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+                                        <span class="font-weight-bold pl-3">jaidev</span>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="images/card-img5.jpg"></img>
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-2 pr-3 pt-3 pb-0">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0 heart-btn">
+                                                    <i class="far fa-heart" id="heart3" onclick="changeColor3()"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-comment" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-paper-plane" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+
+                                        <div>
+                                            <button class="btn p-0">
+                                                <i class="far fa-bookmark" style="font-size: 1.5rem;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">2100 likes</strong>
+                                        <strong class="d-block">jaidev</strong>
+                                        <p class="mb-1">Live like you are born to fly</p>
+
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 500 comments</span>
+                                        </button>
+                                        <div>
+                                            <div>
+                                                <strong>riya <span>True😍❤️😘</span></strong>
+                                            </div>
+                                            <div>
+                                                <strong>megha <span>wowwwwwww❤️❤️❤️</span></strong>
+                                            </div>
+                                        </div>
+                                        <small class="muted">20 HOURS AG0</small>
+                                    </div>
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input type="text" class="w-100 border-0 p-3"
+                                                placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-post">Post</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card mt-5 mb-1">
+                                <div class="card-header  bg-white">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle border border-danger img-fluid"
+                                            style="border-width: 2px !important;">
+                                            <div class="rounded-circle border border-white"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/card-dp3.jpg" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+                                        <span class="font-weight-bold pl-3">vanshika.na</span>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="embed-responsive embed-responsive-1by1">
+                                        <img class="embed-responsive-item" src="images/card-img4.jpg"></img>
+                                    </div>
+                                    <div class="d-flex justify-content-between pl-2 pr-3 pt-3 pb-0">
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0 heart-btn">
+                                                    <i class="far fa-heart" id="heart4" onclick="changeColor4()"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-comment" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                            <li class="list-inline-item ml-2">
+                                                <button class="btn p-0">
+                                                    <i class="far fa-paper-plane" style="font-size: 1.5rem;"></i>
+                                                </button>
+                                            </li>
+                                        </ul>
+
+                                        <div>
+                                            <button class="btn p-0">
+                                                <i class="far fa-bookmark" style="font-size: 1.5rem;"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="pl-3 pr-3 pb-2">
+                                        <strong class="d-block">1400 likes</strong>
+                                        <strong class="d-block">vanshika.na</strong>
+                                        <p class="mb-1">❤️</p>
+
+                                        <button class="btn p-0">
+                                            <span class="text-muted">View all 500 comments</span>
+                                        </button>
+                                        <div>
+                                            <div>
+                                                <strong>riya <span>😍❤️😘</span></strong>
+                                            </div>
+                                            <div>
+                                                <strong>megha <span>❤️❤️❤️</span></strong>
+                                            </div>
+                                        </div>
+                                        <small class="muted">20 HOURS AG0</small>
+                                    </div>
+                                    <div class="position-relative comment-box">
+                                        <form>
+                                            <input type="text" class="w-100 border-0 p-3"
+                                                placeholder="Add a comment...">
+                                            <button class="btn btn-primary position-absolute btn-post">Post</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End of posts -->
+                    <footer class="my-5 pt-5 text-muted text-center text-small">
+
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a href="#">ABOUT</a></li>
+                            <li class="list-inline-item"><a href="#">HELP</a></li>
+                            <li class="list-inline-item"><a href="#">PRESS</a></li>
+                            <li class="list-inline-item"><a href="#">API</a></li>
+                            <li class="list-inline-item"><a href="#">JOBS</a></li>
+                            <li class="list-inline-item"><a href="#">PRIVACY</a></li>
+                            <li class="list-inline-item"><a href="#">TERMS</a></li>
+                            <li class="list-inline-item"><a href="#">LOCATIONS</a></li>
+                            <li class="list-inline-item"><a href="#">TOP ACCOUNTS</a></li>
+                            <li class="list-inline-item"><a href="#">HASHTAGS</a></li>
+                            <li class="list-inline-item"><a href="#">LANGUAGE</a></li>
+
+                        </ul>
+                        <p class="mt4">©2020 INSTAGRAM FROM FACEBOOK</p>
+                    </footer>
+                </div>
+
+                <div class="col-4 d-none d-lg-block pt-5">
+                    <div id="slide-out" class="sidenav">
+                        <div class="d-flex flex-row align-items-center">
+                            <a href="/about.html">
+                                <div class="rounded-circle overflow-hidden d-flex justify-content-center
+                            align-items-center border side-profile-photo">
+
+                                    <img src="images/dp-.jpg" alt=""
+                                        style="transform: scale(1.5);width: 100%;position: absolute;left:0;">
+
+                                </div>
+                            </a>
+                            <div class="ml-3">
+                                <a href="/about.html"> <span
+                                        class="profile-info-username text-dark">priyansha</span></a>
+
+                                <span class="profile-info-name">Priyansha Bhasin</span>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex flex-row justify-content-between">
+                                <strong class="text-muted">Suggestions for You</strong>
+                                <span>See All</span>
+                            </div>
+                            <div class="mt-4">
+                                <div class="d-flex flex-row justify-content-between mt-3 mb-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle border border-danger img-fluid"
+                                            style="border-width: 2px !important;">
+                                            <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/vanshika-s.jpg" alt=""
+                                                    class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+
+                                        <div class="ml-3">
+                                            <span class="profile-info-username">vanshita</span>
+                                            <span class="profile-info-name text-muted" style="font-weight: 500;">New to
+                                                Instagram</span>
+                                        </div>
+
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-follow">
+                                        Follow
+                                    </button>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between mt-3 mb-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle img-fluid" style="border-width: 2px !important;">
+                                            <div class="rounded-circle suggestion-profile-photo"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/ruchi-s.jpg" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <span class="profile-info-username">ruchi.p</span>
+                                            <span class="profile-info-name text-muted" style="font-weight: 500;">Follows
+                                                You</span>
+                                        </div>
+
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-follow">
+                                        Follow
+                                    </button>
+                                </div>
+                                <div class="d-flex flex-row justify-content-between mt-3 mb-3">
+                                    <div class="d-flex flex-row align-items-center">
+                                        <div class="rounded-circle border border-danger img-fluid"
+                                            style="border-width: 2px !important;">
+                                            <div class="rounded-circle border border-white suggestion-profile-photo"
+                                                style="border-width: 2px !important;">
+                                                <img src="images/vish-s.jpg" alt="" class="rounded-circle img-fluid">
+                                            </div>
+                                        </div>
+                                        <div class="ml-3">
+                                            <span class="profile-info-username">simar</span>
+                                            <span class="profile-info-name text-muted"
+                                                style="font-weight: 500;">Suggested
+                                                for You</span>
+                                        </div>
+
+                                    </div>
+                                    <button class="btn btn-primary btn-sm p-0 btn-follow">
+                                        Follow
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4 mb-4 pt-4">
+                            <small class="text-muted">
+                                About . Help . PressAPI . Jobs . Privacy . Terms . Locations . <br>
+                                Top . Accounts . Hashtags .Language . English
+                            </small>
+
+                        </div>
+                        <div>
+                            <small class="text-muted">
+                                © 2020 INSTAGRAM FROM FACEBOOK
+                            </small>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var heartbt = document.getElementById('heartbt');
+        function changeColor() {
+            if (heartbt.classList.contains("far")) {
+                heartbt.classList.remove("far");
+                heartbt.classList.add("fas");
+            } else {
+                heartbt.classList.remove("fas");
+                heartbt.classList.add("far");
+            }
+        }
+        var heartbt1 = document.getElementById('heart1');
+        function changeColor1() {
+            if (heartbt1.classList.contains("far")) {
+                heartbt1.classList.remove("far");
+                heartbt1.classList.add("fas");
+            } else {
+                heartbt1.classList.remove("fas");
+                heartbt1.classList.add("far");
+            }
+        }
+        var heartbt2 = document.getElementById('heart2');
+        function changeColor2() {
+            if (heartbt2.classList.contains("far")) {
+                heartbt2.classList.remove("far");
+                heartbt2.classList.add("fas");
+            } else {
+                heartbt2.classList.remove("fas");
+                heartbt2.classList.add("far");
+            }
+        }
+        var heartbt3 = document.getElementById('heart3');
+        function changeColor3() {
+            if (heartbt3.classList.contains("far")) {
+                heartbt3.classList.remove("far");
+                heartbt3.classList.add("fas");
+            } else {
+                heartbt3.classList.remove("fas");
+                heartbt3.classList.add("far");
+            }
+        }
+        var heartbt4 = document.getElementById('heart4');
+        function changeColor4() {
+            if (heartbt4.classList.contains("far")) {
+                heartbt4.classList.remove("far");
+                heartbt4.classList.add("fas");
+            } else {
+                heartbt4.classList.remove("fas");
+                heartbt4.classList.add("far");
+            }
+        }
+        var heartblk = document.getElementById('heartblk');
+
+        function changeToBlack() {
+            if (heartblk.classList.contains("far")) {
+                heartblk.classList.remove("far");
+                heartblk.classList.add("fas");
+            } else {
+                heartblk.classList.remove("fas");
+                heartblk.classList.add("far");
+            }
+        }
+
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+
+</html>
